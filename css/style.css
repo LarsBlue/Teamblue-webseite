@@ -344,8 +344,9 @@ footer a:hover { color: var(--white); }
 /* Products */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 240px));
+  justify-content: center;
+  gap: 24px;
 }
 
 .product-card {
@@ -359,7 +360,7 @@ footer a:hover { color: var(--white); }
 
 .product-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 160px;
   background: var(--grey-light);
   display: flex;
   align-items: center;
@@ -368,10 +369,12 @@ footer a:hover { color: var(--white); }
 }
 
 .product-image img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
-  padding: 16px;
+  padding: 12px;
 }
 
 .product-card .product-body {
