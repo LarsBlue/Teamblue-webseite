@@ -3,5 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const menu = document.querySelector("nav ul");
   if (toggle && menu) {
     toggle.addEventListener("click", () => menu.classList.toggle("open"));
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => menu.classList.remove("open"));
+    });
   }
 });
