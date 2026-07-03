@@ -137,7 +137,24 @@ nav a.active {
 
 .hero.with-bg {
   position: relative;
-  background: linear-gradient(135deg, rgba(6, 28, 61, 0.72), rgba(11, 46, 94, 0.62) 55%, rgba(26, 95, 208, 0.55)), var(--hero-bg) center/cover no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.hero.with-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(6, 28, 61, 0.72), rgba(11, 46, 94, 0.62) 55%, rgba(26, 95, 208, 0.55));
+  z-index: 0;
+}
+
+.hero.with-bg .container {
+  position: relative;
+  z-index: 1;
 }
 
 /* Image + text split sections */
