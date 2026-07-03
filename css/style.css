@@ -113,7 +113,7 @@ nav a.active {
 
 /* Hero */
 .hero {
-  background: linear-gradient(135deg, var(--blue-dark), var(--blue) 60%, var(--blue-light));
+  background: linear-gradient(135deg, #061c3d, var(--blue-dark) 55%, var(--blue));
   color: var(--white);
   padding: 90px 0;
   text-align: center;
