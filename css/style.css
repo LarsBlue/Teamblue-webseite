@@ -64,6 +64,16 @@ img { max-width: 100%; display: block; }
   background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
 }
 
+.logo img {
+  height: 36px;
+  width: auto;
+  border-radius: 4px;
+}
+
+footer .logo img {
+  height: 32px;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -117,6 +127,48 @@ nav a.active {
 
 .hero.small {
   padding: 60px 0;
+}
+
+.hero.with-bg {
+  position: relative;
+  background: linear-gradient(rgba(11, 46, 94, 0.78), rgba(26, 95, 208, 0.7)), var(--hero-bg) center/cover no-repeat;
+}
+
+/* Image + text split sections */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.split.reverse .split-image {
+  order: 2;
+}
+
+.split-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 30px rgba(11, 46, 94, 0.15);
+}
+
+.split-text h2 {
+  color: var(--blue-dark);
+  font-size: 1.8rem;
+  margin-top: 0;
+}
+
+.split-text p {
+  color: #43526b;
+}
+
+@media (max-width: 860px) {
+  .split, .split.reverse {
+    grid-template-columns: 1fr;
+  }
+  .split.reverse .split-image {
+    order: 0;
+  }
 }
 
 .btn {
